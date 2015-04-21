@@ -1,21 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package wgst;
 
+import java.awt.GridLayout;
+import javax.swing.*;
+
 /**
- *
  * @author DesktopStian
  */
 public class Wgst {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+    
+        JFrame frame = new JFrame("Tile");
+        JPanel panel = new JPanel(new GridLayout(10,10));
+        JLabel[] map = new JLabel[100];
+        for(int i=0;i<100;i++){
+             map[i]=new JLabel();
+             panel.add(map[i]);
+        }        
+        frame.add(panel);
+        frame.setVisible(true);
+        
     }
     
 }
+    
